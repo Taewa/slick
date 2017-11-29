@@ -65,6 +65,7 @@
                 initialSlide: 0,
                 lazyLoad: 'ondemand',
                 mobileFirst: false,
+                noChangeSlide: false,
                 pauseOnHover: true,
                 pauseOnFocus: true,
                 pauseOnDotsHover: false,
@@ -1826,7 +1827,7 @@
         _.init();
 
         if( !initializing ) {
-
+            if(_.options.noChangeSlide) return;
             _.changeSlide({
                 data: {
                     message: 'index',
